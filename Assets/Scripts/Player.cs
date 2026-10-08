@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         Inputs.Player.Ability3.performed += selectedability3;
         Inputs.Player.Ability4.performed += selectedability4;
         Inputs.Player.Ability5.performed += selectedability5;
-
+        
         Inputs.Player.Attack.performed += Oncast;
     }
 
@@ -72,7 +72,14 @@ public class Player : MonoBehaviour
     }
     private void OnDisable()
     {
+        Inputs.Player.Ability1.performed -= selectedability1;
+        Inputs.Player.Ability2.performed -= selectedability2;
+        Inputs.Player.Ability3.performed -= selectedability3;
+        Inputs.Player.Ability4.performed -= selectedability4;
+        Inputs.Player.Ability5.performed -= selectedability5;
 
+        Inputs.Player.Attack.performed -= Oncast;
+        Inputs.Disable();
     }
     public void Select(int index)
     {

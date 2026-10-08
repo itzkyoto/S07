@@ -3,23 +3,24 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed;
-
     public StatusEFfect effect;
+    public float effectDuration;           
+    public float lifetime = 3f;             
+    public GameObject hitEffectPrefab;      
 
-    public float duration;
-    private void Start()
-    {
-       Destroy(gameObject, duration);
-    }
-    private void Update()
-    {
-        transform.position += transform.up * speed * Time.deltaTime;
-    }
+    private void Start() => Destroy(gameObject, lifetime);
+
+    private void Update() => transform.position += transform.up * speed * Time.deltaTime;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-        if (enemy == null)return;
+        if (!collision.TryGetComponent(out Enemy enemy)) return;
 
-        enemy.ApplayStatus(effect);
+        enemy.ApplayStatus(effect, effectDuration);
+
+        if (hitEffectPrefab != null)
+            Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+
+        Destroy(gameObject);
     }
 }

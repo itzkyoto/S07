@@ -15,9 +15,15 @@ public abstract class BaseAbility : MonoBehaviour
         if (castFeedback == null) return;
         castFeedback.PlayFeedbacks();
     }
-    protected void Shoot(float speed,StatusEFfect effect, float duration)
+    protected void Shoot(float speed, StatusEFfect effect, float effectDuration)
     {
-        GameObject proyectile = Instantiate(projectilePrefab, firepoint.position, Quaternion.identity); 
+        GameObject go = Instantiate(projectilePrefab, firepoint.position, firepoint.rotation);
+
+        if (go.TryGetComponent(out Projectile p))
+        {
+            p.speed = speed;
+            p.effect = effect;
+            p.effectDuration = effectDuration;
+        }
     }
-    
 }
