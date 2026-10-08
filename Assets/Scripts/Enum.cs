@@ -8,5 +8,7 @@ public enum StatusEFfect
     
     Shock,
     
-    Slow
+    Slow,
+
+    Wind
 }

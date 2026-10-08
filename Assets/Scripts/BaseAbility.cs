@@ -12,6 +12,7 @@ public abstract class BaseAbility : MonoBehaviour
     public abstract void execute();
     protected virtual void PlayFeedback()
     {
+        if (castFeedback == null) return;
         castFeedback.PlayFeedbacks();
     }
     protected void Shoot(float speed,StatusEFfect effect, float duration)
