@@ -351,10 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5863ceb64d71842ac3de7713dfe306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireAbility
-  projectilePrefab: {fileID: 0}
-  firepoint: {fileID: 0}
-  castFeedback: {fileID: 0}
-  fireParticlesFeedback: {fileID: 0}
+  projectilePrefab: {fileID: 1698562561766479656, guid: f4a15c895008ca5439cf505d51c4048a, type: 3}
+  firepoint: {fileID: 383289012}
+  castFeedback: {fileID: 371353551}
+  fireParticlesFeedback: {fileID: 371353551}
 --- !u!1 &371353549
 GameObject:
   m_ObjectHideFlags: 0
