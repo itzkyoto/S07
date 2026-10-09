@@ -157,7 +157,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b294f8f753a7d84bae6968fdf8e6dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  Abilities: []
+  Abilities:
+  - {fileID: 103902316}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &103902307
 MonoBehaviour:
   m_ObjectHideFlags: 0
