@@ -11,7 +11,7 @@ public class FireAbility : BaseAbility
         if (fireParticlesFeedback != null)
             fireParticlesFeedback.PlayFeedbacks(); 
     }
-    public override void execute()
+    public override void Execute()
     {
         Shoot(10, StatusEFfect.Burn, 3f);
         PlayFeedback();

@@ -11,7 +11,7 @@ public class SlowAbility : BaseAbility
         if (SlowParticlesFeedback != null)
             SlowParticlesFeedback.PlayFeedbacks();
     }
-    public override void execute()
+    public override void Execute()
     {
         Shoot(5, StatusEFfect.Slow, 5f);
         PlayFeedback();

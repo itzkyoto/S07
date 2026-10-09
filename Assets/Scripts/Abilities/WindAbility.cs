@@ -11,7 +11,7 @@ public class WindAbility : BaseAbility
         if (windParticlesFeedback != null)
             windParticlesFeedback.PlayFeedbacks();
     }
-    public override void execute()
+    public override void Execute()
     {
         Shoot(10, StatusEFfect.Wind, 3f);
         PlayFeedback();

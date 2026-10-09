@@ -11,7 +11,7 @@ public class ShockAbility : BaseAbility
         if (shockParticlesFeedback != null)
             shockParticlesFeedback.PlayFeedbacks();
     }
-    public override void execute()
+    public override void Execute()
     {
         Shoot(10, StatusEFfect.Shock, 3f);
         PlayFeedback();

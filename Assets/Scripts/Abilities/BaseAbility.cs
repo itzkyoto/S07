@@ -9,7 +9,7 @@ public abstract class BaseAbility : MonoBehaviour
 
     public MMF_Player castFeedback;
 
-    public abstract void execute();
+    public abstract void Execute();
     protected virtual void PlayFeedback()
     {
         if (castFeedback == null) return;

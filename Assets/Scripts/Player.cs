@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     {
         if (Current == null) return;
 
-        Current.execute();
+        Current.Execute();
         Current = null;
     }
 

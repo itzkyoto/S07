@@ -11,7 +11,7 @@ public class IceAbility : BaseAbility
         if (iceParticlesFeedback != null)
             iceParticlesFeedback.PlayFeedbacks();
     }
-    public override void execute()
+    public override void Execute()
     {
         Shoot(8, StatusEFfect.Freeze, 2f);
         PlayFeedback();

@@ -11,7 +11,7 @@ public class PoisonAbility : BaseAbility
         if (poisonParticlesFeedback != null)
             poisonParticlesFeedback.PlayFeedbacks();
     }
-    public override void execute()
+    public override void Execute()
     {
         Shoot(15, StatusEFfect.Poison, 3.5f);
         PlayFeedback();
